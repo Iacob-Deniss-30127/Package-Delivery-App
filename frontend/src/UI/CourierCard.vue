@@ -1,10 +1,26 @@
 <template>
-  <section class="card">
+  <section class="card" @click="selectCourier">
     <h3 class="courier-name">
-      <slot></slot>
+      {{ courier.name }}
     </h3>
   </section>
 </template>
+
+<script setup>
+const props = defineProps({
+  courier: {
+    type: Object,
+    required: true,
+  },
+});
+
+const emit = defineEmits(["selectCourier"]);
+
+const selectCourier = () => {
+  console.log("The courier id is : ", props.courier.id);
+  emit("selectCourier", props.courier.id);
+};
+</script>
 
 <style scoped>
 .card {

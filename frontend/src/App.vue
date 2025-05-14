@@ -17,5 +17,6 @@ body,
 html {
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 </style>

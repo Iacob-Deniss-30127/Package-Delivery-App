@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import CouriersTable from "@/components/CouriersTable.vue";
 import MainPage from "@/components/MainPage.vue";
 import CourierCard from "@/UI/CourierCard.vue";
+import PackagePage from "@/components/PackagePage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +16,11 @@ const router = createRouter({
       name: "couriers-table",
       path: "/couriers-table",
       component: CouriersTable,
+    },
+    {
+      name: "package-page",
+      path: "/packages",
+      component: PackagePage,
     },
   ],
 });

@@ -1,11 +1,7 @@
 <template>
   <header class="header">
     <div><h1 class="header-title">Welcome to the main page</h1></div>
-    <nav class="header-nav">
-      <div class="input-container" v-if="showInput">
-        <input type="text" placeholder="Search for a courier.." />
-      </div>
-    </nav>
+    <nav class="header-nav"></nav>
     <nav class="header-nav">
       <router-link to="/" class="third-column">Profile</router-link>
     </nav>
@@ -82,11 +78,16 @@ a {
   background-color: #222;
   grid-column: 2; /* Place the input in the second column */
   justify-content: center; /* Center the input horizontally */
+  gap: 20px;
 }
 input[type="text"] {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 300px; /* Set a fixed width for the input */
+}
+
+.search-button {
+  border-radius: 5px;
 }
 </style>

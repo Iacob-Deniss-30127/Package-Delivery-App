@@ -4,6 +4,9 @@
     <router-link :to="{ name: 'couriers-table' }" class="sidebar-item"
       >Couriers</router-link
     >
+    <router-link :to="{ name: 'package-page' }" class="sidebar-item"
+      >Packages</router-link
+    >
     <a href="/about" class="sidebar-item">About</a>
   </div>
 </template>
