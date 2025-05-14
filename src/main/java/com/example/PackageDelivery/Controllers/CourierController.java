@@ -47,4 +47,10 @@ public class CourierController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
+
+    @GetMapping("/without-pending-packages")
+    public ResponseEntity<List<CourierEntity>> getCouriersWithoutPendingPackages() {
+        List<CourierEntity> couriers = courierService.getAllCouriersWithoutPendingPackages();
+        return ResponseEntity.ok(couriers);
+    }
 }

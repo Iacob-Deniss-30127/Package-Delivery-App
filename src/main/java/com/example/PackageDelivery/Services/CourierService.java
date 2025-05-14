@@ -42,4 +42,8 @@ public class CourierService {
         }
     }
 
+    public List<CourierEntity> getAllCouriersWithoutPendingPackages() {
+        return this.courierRepository.findAllCouriersWithoutPendingPackages();
+    }
+
 }

@@ -20,7 +20,7 @@ public class CourierEntity {
     private String email;
 
     @Column(nullable = false)
-    private Boolean isManager;
+    private Boolean isManager;  
 
     @ManyToOne
     @JoinColumn(name = "manager_id")

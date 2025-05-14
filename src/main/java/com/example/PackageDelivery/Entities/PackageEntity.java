@@ -5,11 +5,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-
 import java.util.Date;
-import java.util.UUID;
 
 @Data
 @Entity
@@ -18,6 +14,9 @@ public class PackageEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column()
+    private String packageName;
 
     @Column(updatable = false, nullable = false)
     @CreationTimestamp
@@ -28,6 +27,9 @@ public class PackageEntity {
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    @Column()
+    private Integer payOnDelivery;
 
     @ManyToOne
     @JoinColumn(name = "courier_id")
